@@ -10,6 +10,7 @@ function App () {
    const contacts = [
      {
        id:"1",
+    
       name:"Praveen",
       email:"praveen@gmail.com" ,
   },
