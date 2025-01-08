@@ -1,6 +1,7 @@
 import React from "react";
 import user from "../images/user.png";
 import { Link } from "react-router-dom";
+import EditeContact from "./EditeContacts";
 
 const ContactCard = (props) => {
   const { id, name, email } = props.contact;
@@ -15,9 +16,14 @@ const ContactCard = (props) => {
       </div>
       <i
         className="trash alternate outline icon"
-        style={{ color: "red", marginTop: "7px" }}
+        style={{ color: "red", marginTop: "7px",marginLeft:"10px" }}
         onClick={() => props.clickHander(id)}
       ></i>
+       <Link to={{pathname :'Edit' ,state :{contact:props.contact}}}> <i
+        className="edit alternate outline icon"
+        style={{ color: "green", marginTop: "7px" }}
+     
+      ></i></Link>
     </div>
   );
 };
